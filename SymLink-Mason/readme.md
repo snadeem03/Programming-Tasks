@@ -1,56 +1,47 @@
-## Problem Statement : Directory Linker Utility
- You are required to design a Python script that interacts with the terminal to perform specific operations on a given directory path. The script should automate the creation of hard links and soft links for files within the specified directory and generate a mapping list for the created links.
+
+# SymLink Mason
+
+"Symlink Mason" is an advanced utility designed to streamline the process of creating and managing symbolic links within a file system. With its intuitive interface and powerful features, Symlink Mason empowers users to effortlessly forge connections between files and directories, enhancing file organization and accessibility.
+
+Key features of Symlink Mason include:
+
+* **Automated Link Generation**: Symlink Mason automates the creation of symbolic links, enabling users to quickly establish connections between files and directories without manual intervention.
+
+* **Error Handling and Reporting**: Symlink Mason provides robust error handling and reporting capabilities, ensuring that users are promptly notified of any issues encountered during link creation or management.
 
 
-### Requirements :
- 1. Input : 
-  * Accept a directory path as a string input from the user.
+
+
+
+
+
+
+## Acknowledgements
+
+ - [Soft link vs Hard llink](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiehNn-1cWEAxVm3TgGHW7dDDQQFnoECCIQAQ&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Fdifference-between-hard-link-and-soft-link%2F&usg=AOvVaw2YEYsSY02RRCgekneFcc4c&opi=89978449)
+ - [Hardlinks](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi7z7ea1sWEAxU6wjgGHaVtAosQFnoECBEQAw&url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Ffileio%2Fhard-links-and-junctions%23%3A~%3Atext%3DA%2520hard%2520link%2520is%2520the%2Cthe%2520links%2520that%2520reference%2520it.&usg=AOvVaw3a_CAA4KNpk4dO2wJZ23aO&opi=89978449)
+
+
  
- 2. Operations:
-  * Iterate through the files within the provided directory.
-  * For each file:
-   * Create a hard link with the filename appended with _hardlink.
-   * Create a soft link with the filename appended with _softlink.
-
- 3. Output:
-  * Generate a list containing:
-   * Original filenames.
-   * Corresponding hard link filenames.
-   * Corresponding soft link filenames.
- 
- 4. Functionality :
-  * Create a function createHardLink(original_file_name) that:
-   * Takes the original filename as input.
-   * Uses the terminal command to create a hard link for the file.
- 
-  * Create a function createSoftLink(original_file_name) that:
-   * Takes the original filename as input.
-   * Uses the terminal command to create a soft link for the file.
-
- * Create a function mapHardLinksAndSoftLinks() that:
-  * Fetches and returns a list of all files within the directory.
-  * Filters the list to only consider files (ignores directories).
-  * Returns a list containing original filenames, hard link filenames, and soft link filenames.
-
- 5. Validation & Error Handling:
-  * Handle potential errors such as:
-   * Invalid directory paths.
-   * Failed link creation commands.
-   * Invalid or missing terminal commands.
 
 
-### Instructions:
- 1. Prompt the user to input a directory path.
- 2. Retrieve the list of files from the specified directory
- 3. Iterate over each file in the directory:
-  * Check if the file has already been linked.
-  * If not, create both hard and soft links for the file.
+## Usage/Examples
 
- 4. Generate a mapping list showing the original filenames, hard link filenames, and soft link filenames.
- 5. Display the generated mapping list to the user.
+### Installation steps
+* **Clone the Repository** : Clone the repository containing SymLink Mason Python application to your local machine. 
+
+* **Navigate to the directory** :  Open a terminal or command prompt and navigate to the root directory of your Python application where identification_links.py is located.This is where you can find raw python file and implementation
+
+* **Navigate to the build directory** : Navigate to the build directory under the root dir of the project where executable file would be located.
 
 
-### Constraints:
- * Ensure that you handle all exceptions and errors gracefully.
- * The script should be able to run on a Unix-like system due to the usage of terminal commands like ln.
+### Usage
+Run the executable file using the command 
+
+``.\identification_links.exe [directory]``
+
+
+* directory indicates the folder for which you want to create softlinks and hardlinks.
+
+
  
