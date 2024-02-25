@@ -1,40 +1,49 @@
-# BGP Route Selection Challenge
 
-## Problem statement : This challenge revolves around simulating a simplified Border Gateway Protocol (BGP) route selection algorithm. Given two routes from two different Autonomous Systems (ASes), your task is to determine the best route based on specific BGP route attributes.
+# BGP Route Decision Engine
 
-## Background
- BGP is the standard protocol for exchanging routing information between different Autonomous Systems on the Internet. Each BGP route comes with attributes that help in route selection when there are multiple paths to the same destination.
+The BGP (Border Gateway Protocol) Route Decision Engine is a sophisticated tool designed to facilitate efficient routing decisions in large-scale network environments. Leveraging advanced algorithms and network intelligence, this engine evaluates and selects the optimal path for data packets to traverse across interconnected networks.
 
- ### Attributes to consider 
- * prefix : The destination IP network (e.g., 192.168.1.0/24).
- * AS_PATH :  The sequence of Autonomous System numbers the route has traversed.
- * Next hop : The IP address of the next-hop router.
- * Local preference : A preference value indicating the route's desirability (higher values are preferred).
+Key features of the BGP Route Decision Engine include:
 
-## Task Description
- Given two routes from two ASes, implement a function that decides the best path to a destination network based on the following criteria:
+* **Path Selection**: Analyzes various attributes such as AS_PATH, local preference, origin, and other BGP attributes to determine the best route for traffic forwarding.
 
- 1. Local Preference : Prefer the route with the higher Local Preference value.
- 2. AS_PATH_LENGTH : If the Local Preference values are the same, prefer the route with the shortest AS_PATH (fewest AS hops).
- 3. Equal criteria :  If both Local Preference and AS_PATH length are the same for both routes, choose any route.
+* **Route Optimization**: Optimizes routing decisions to minimize latency, maximize bandwidth utilization, and enhance overall network performance.
 
 
-## Input format 
- The function will receive two route objects, each representing a route from an AS, in the following format:
 
-        route1 = {
-    'prefix': '192.168.1.0/24',
-    'as_path': [100, 200],
-    'next_hop': '10.0.0.1',
-    'local_preference': 200
-        }
 
-        route2 = {
-    'prefix': '192.168.1.0/24',
-    'as_path': [200],
-    'next_hop': '10.0.0.2',
-    'local_preference': 150
-        }
 
-## Output format 
- Return the best route (either from AS100 or AS200) based on the defined criteria. If both routes are equally good, the function can return either route.
+
+
+
+
+## Acknowledgements
+
+ - [BGP](https://www.fortinet.com/resources/cyberglossary/bgp-border-gateway-protocol#:~:text=Border%20Gateway%20Protocol%20(BGP)%20refers,This%20is%20accomplished%20through%20peering.)
+ - [BGP Routing](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjZu6XWzMWEAxWGzzgGHT1gCXkQFnoECCkQAQ&url=https%3A%2F%2Fwww.cloudflare.com%2Flearning%2Fsecurity%2Fglossary%2Fwhat-is-bgp%2F&usg=AOvVaw0Coq1nRSCC0duGW1L1KfKM&opi=89978449)
+
+
+ 
+
+
+## Usage/Examples
+
+### Installation steps
+* **Clone the Repository** : Clone the repository containing BGP Route decision engine Python application to your local machine. 
+
+* **Navigate to the directory** :  Open a terminal or command prompt and navigate to the root directory of your Python application where bgp-route-finder.py is located.This is where you can find raw python file and implementation
+
+* **Navigate to the build directory** : Navigate to the build directory under the root dir of the project where executable file would be located.
+
+
+### Usage
+Run the executable file using the command 
+
+``.\bgp-route-finder.exe [as-path_route1] [preference-value_route1] [as-path_route2] [preference-value_route2]``
+
+
+* as_path : indicates the path followed from route-1 and route-2 respectively
+* preference : preference value for route-1 and route-2 respectively 
+
+
+ 
