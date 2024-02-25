@@ -1,4 +1,6 @@
-# checking for phishing
+# checking for potential phishing emails
+# analyze the email content and check for the malicious links and words 
+
 
 import re 
 from urllib.parse import urlparse
