@@ -3,15 +3,6 @@ import os
 import subprocess
 
 
-# take the input as a string containing the directory path
-
-# create hardlinks for all the files in the directory with file name appending _hardlink ( interact with the terminal using os and sys modules)
-
-# create softlinks for all the files in the directory with the file name appending _softlink (interact with the terminal using os and sys modules)
-
-# generate a list that has corresponding files and their softlink files and hardlink files
-
-
 def createHardLink(original_file_name):
     try:
         output=subprocess.run(['ln',f"/home/nadeemshaik/Sample/{original_file_name}",f"/home/nadeemshaik/Sample/{original_file_name}_hardlink"],stdout=subprocess.PIPE,text=True,stderr=subprocess.PIPE)
@@ -46,7 +37,7 @@ def mapHardLinksAndSoftLinks():
 
 
 
-dir_path=input("Enter the path of the directory : ")
+dir_path=sys.argv[1]
 
 # executing the first command
 try:
